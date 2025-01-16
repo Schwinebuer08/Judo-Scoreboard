@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Judo Scoreboard</title>
+  <link rel="shortcut icon" href="img/logo_tsv.png" />
+  <link href="style.css" rel="stylesheet" />
+  <script src="scripte/punkte.js"></script>
+  <script src="scripte/Oseikomi/counterw.js"></script>
+  <script src="scripte/Oseikomi/counterb.js"></script>
+  <script src="scripte/time.js"></script>
+  <script src="scripte/shido.js"></script>
+  <script src="scripte/config.js"></script>
+  <script src="scripte/cmd.js"></script>
+</head>
+
+<body>
+  <nav>
+    <div class="title">
+      <div class="config" id="config" style="display: none">
+        Punkte
+        <input type="text" id="poi" value="10" />
+        Oseikomi
+        <input type="text" id="ose" value="20" />
+        Kampfzeit
+        <input type="text" id="tim" value="2" />
+        Wazari
+        <input type="text" id="waz" value="2" />
+        Ippon
+        <input type="text" id="ipp" value="3" />
+        <button onclick="saveConfig()">Save</button>
+      </div>
+      <input type="text" class="links title" name="Tunier" placeholder="Tunier" />
+      <input type="text" class="rechts title" name="Masse" placeholder="Gewichtsklasse" />
+    </div>
+  </nav>
+
+  <main>
+    <div class="kämpfer">
+      <div class="links">
+        <input class="inb" type="text" name="Kämpfer A" placeholder="Kämpfer A" /><br />
+        <p id="PunkteBlau">0 Punkte</p>
+        <br />
+        <p id="counterb">Oseikomi: 0 Sekunden</p>
+        <br />
+        <p id="Shidob">Shido</p>
+      </div>
+      <div class="rechts">
+        <input class="inw" type="text" name="Kämpfer B" placeholder="Kämpfer B" /><br />
+        <p id="PunkteWeiß">0 Punkte</p>
+        <br />
+        <p id="counterw">Oseikomi: 0 Sekunden</p>
+        <br />
+        <p id="Shidow">Shido</p>
+      </div>
+    </div>
+  </main>
+  <footer class="shido_time">
+    <img class="red_dot" id="img1b" src="img/red_dot.png" width="230" height="230" style="visibility: hidden" />
+    <img class="red_dot" id="img2b" src="img/red_dot.png" width="230" height="230" style="visibility: hidden" />
+    <img class="red_dot" id="img3b" src="img/red_dot.png" width="230" height="230" style="visibility: hidden" />
+    <p class="countdown" id="countdown" onclick="resetCountdown()">2:00</p>
+    <!--hier Kampfzeit + scripte/time.js-->
+    <img class="red_dot" id="img3w" src="img/red_dot.png" width="230" height="230" style="visibility: hidden" />
+    <img class="red_dot" id="img2w" src="img/red_dot.png" width="230" height="230" style="visibility: hidden" />
+    <img class="red_dot" id="img1w" src="img/red_dot.png" width="230" height="230" style="visibility: hidden" />
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+* {
+  margin: 0px;
+}
+
+body {
+  display: grid;
+  background-image: linear-gradient(to right, blue 50%, white 50%);
+  grid-template-rows: 1fr 9fr 230px;
+  grid-template-areas:
+    "navbar"
+    "main"
+    "footer";
+  height: 100vh;
+}
+
+nav {
+  grid-area: navbar;
+  background-color: black;
+  display: flex;
+}
+
+main {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kämpfer {
+  font-size: 500%;
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+}
+
+.rechts {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.inb {
+  font-size: 100%;
+  background-color: blue;
+  border: 0px;
+  color: white;
+  text-align: center;
+}
+
+.inw {
+  font-size: 100%;
+  background-color: white;
+  border: 0px;
+  color: black;
+  text-align: center;
+}
+
+footer {
+  grid-area: footer;
+  font-size: 1128%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.red_dot {
+  display: flex;
+}
+
+.countdown {
+  background-color: black;
+  color: gold;
+}
+
+.title {
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border: 0px;
+  color: gold;
+  background-color: black;
+  text-align: center;
+  width: 100%;
+}
+
+.config {
+  flex-direction: column;
+  justify-content: flex-start;
+}

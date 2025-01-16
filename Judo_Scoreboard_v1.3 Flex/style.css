@@ -5,7 +5,7 @@
 body {
   display: grid;
   background-image: linear-gradient(to right, blue 50%, white 50%);
-  grid-template-rows: 1fr 9fr 230px;
+  grid-template-rows: 1fr 9fr 1fr;
   grid-template-areas:
     "navbar"
     "main"
@@ -34,6 +34,7 @@ main {
 }
 
 .links {
+  font-size: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -42,6 +43,7 @@ main {
 }
 
 .rechts {
+  font-size: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -49,7 +51,7 @@ main {
 }
 
 .inb {
-  font-size: 100%;
+  font-size: 3vw;
   background-color: blue;
   border: 0px;
   color: white;
@@ -57,7 +59,7 @@ main {
 }
 
 .inw {
-  font-size: 100%;
+  font-size: 3vw;
   background-color: white;
   border: 0px;
   color: black;
@@ -66,13 +68,17 @@ main {
 
 footer {
   grid-area: footer;
-  font-size: 1128%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
+.countdown {
+  font-size: 9vw;
+}
 
 .red_dot {
+  width: 12vw;
+  height: 12vw;
   display: flex;
 }
 
@@ -82,7 +88,7 @@ footer {
 }
 
 .title {
-  font-size: 200%;
+  font-size: 3vw;
   display: flex;
   align-items: center;
   justify-content: space-around;

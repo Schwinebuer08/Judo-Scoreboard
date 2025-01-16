@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  font-size: 116%;
+}
+
+nav {
+  padding: 1rem;
+  gap: 1rem;
+  border-bottom: solid 5px black;
+  background-color: black;
+}
+
+main {
+  height: 88.7vh;
+  background-image: linear-gradient(to right, blue 50%, white 50%);
+}
+
+.title {
+  font-size: 200%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: gold;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.rechts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kämpfer {
+  font-size: 400%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  background-color: black;
+  border: 0px;
+  color: gold;
+  text-align: center;
+  width: 100%;
+}
+
+.inb {
+  font-size: 100%;
+  background-color: blue;
+  border: 0px;
+  color: white;
+  text-align: center;
+}
+
+.inw {
+  font-size: 100%;
+  background-color: white;
+  border: 0px;
+  color: black;
+  text-align: center;
+}
+
+.shido_time {
+  font-size: 1128%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.red_dot {
+  display: flex;
+}
+
+.countdown {
+  background-color: black;
+  color: gold;
+}
+
+.config {
+  flex-direction: column;
+  justify-content: flex-start;
+}

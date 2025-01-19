@@ -156,5 +156,9 @@ document.addEventListener("keydown", function (key) {
     }
   }
 
-  //--------------
+  //-----------------------fullscreen-----------------------
+  if (key.code == "Space") {
+    document.documentElement.requestFullscreen().catch(console.log);
+  }
+
 });

@@ -33,7 +33,7 @@ function stopCountw() {
   timer_onw = 0;
 }
 
-function resetw() {
+function resetCountw() {
   stopCountw();
   counterw = counterw - counterw;
   document.getElementById("counterw").innerHTML =

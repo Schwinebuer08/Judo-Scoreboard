@@ -9,3 +9,5 @@
 4. Nach jedem Kampf umbedingt alles zurücksetzten mit der Taste "#" !!!
 
    Die Einstellungen bleiben erhalten.
+
+5. Die Steuerung wird in der Datei Steuerung erklärt.

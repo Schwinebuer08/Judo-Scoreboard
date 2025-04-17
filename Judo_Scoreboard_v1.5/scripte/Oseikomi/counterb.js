@@ -33,7 +33,7 @@ function stopCountb() {
   timer_onb = 0;
 }
 
-function resetb() {
+function resetCountb() {
   stopCountb();
   counterb = counterb - counterb;
   document.getElementById("counterb").innerHTML =

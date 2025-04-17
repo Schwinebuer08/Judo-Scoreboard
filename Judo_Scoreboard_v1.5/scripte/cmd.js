@@ -1,9 +1,9 @@
 let isconfig = 0;
-// let istime = 0;
-// let countb = 0;
-// let countw = 0;
-let shift = 0;
-let strg = 0;
+let istime = 0;
+let iscountb = 0;
+let iscountw = 0;
+let isShift = 0;
+let isStrg = 0;
 
 // document.addEventListener("keydown", function (key) {
 //   //-------------------------Kampfzeit-------------------------
@@ -17,9 +17,9 @@ let strg = 0;
 //       stopCountdown();
 //       istime = 0;
 //       stopCountb();
-//       countb = 0;
+//       iscountb = 0;
 //       stopCountw();
-//       countw = 0;
+//       iscountw = 0;
 //     }
 //   }
 
@@ -27,8 +27,8 @@ let strg = 0;
 //   if (key.key == "T") {
 //     resetCountdown();
 //     istime = 0;
-//     countb = 0;
-//     countw = 0;
+//     iscountb = 0;
+//     iscountw = 0;
 //   }
 
 //   //-------------------------Punkte-------------------------
@@ -67,36 +67,36 @@ let strg = 0;
 
 //   // Oseikomi Blau toggle
 //   if (key.key == "w") {
-//     if (countb == 0) {
+//     if (iscountb == 0) {
 //       startCountb();
-//       countb = 1;
+//       iscountb = 1;
 //     } else {
 //       stopCountb();
-//       countb = 0;
+//       iscountb = 0;
 //     }
 //   }
 
 //   // Oseikomi Blau reset
 //   if (key.key == "W") {
-//     resetb();
-//     countb = 0;
+//     resetCountb();
+//     iscountb = 0;
 //   }
 
 //   // Oseikomi Weiß toggle
 //   if (key.key == "o") {
-//     if (countw == 0) {
+//     if (iscountw == 0) {
 //       startCountw();
-//       countw = 1;
+//       iscountw = 1;
 //     } else {
 //       stopCountw();
-//       countw = 0;
+//       iscountw = 0;
 //     }
 //   }
 
 //   // Oseikomi Weiß reset
 //   if (key.key == "O") {
-//     resetw();
-//     countw = 0;
+//     resetCountw();
+//     iscountw = 0;
 //   }
 
 //   //-------------------------Shidos-------------------------
@@ -137,10 +137,10 @@ let strg = 0;
 //   // istime = 0;
 //   blaureset();
 //   weißreset();
-//   resetb();
-//   // countb = 0;
-//   resetw();
-//   // countw = 0;
+//   resetCountb();
+//   // iscountb = 0;
+//   resetCountw();
+//   // iscountw = 0;
 //   Shidoresetb();
 //   Shidoresetw();
 // }
@@ -166,14 +166,14 @@ let strg = 0;
 
 document.addEventListener("keydown", function (e) {
   if (e.key == "Shift") {
-    shift = 1;
+    isShift = 1;
   } else {
-    shift = 0;
+    isShift = 0;
   }
   if (e.key == "Control") {
-    strg = 1;
+    isStrg = 1;
   } else {
-    strg = 0;
+    isStrg = 0;
   }
 
   //-------------------------Reset all-------------------------
@@ -182,10 +182,10 @@ document.addEventListener("keydown", function (e) {
     // istime = 0;
     blaureset();
     weißreset();
-    resetb();
-    // countb = 0;
-    resetw();
-    // countw = 0;
+    resetCountb();
+    iscountb = 0;
+    resetCountw();
+    iscountw = 0;
     Shidoresetb();
     Shidoresetw();
   }
@@ -205,14 +205,14 @@ document.addEventListener("keydown", function (e) {
 });
 
 document.addEventListener("keyup", function (e) {
-  shift = 0;
-  strg = 0;
+  isShift = 0;
+  isStrg = 0;
 });
 
 function clickPunkteBlau() {
-  if (shift == 1) {
+  if (isShift == 1) {
     blauminus();
-  } else if (strg == 1) {
+  } else if (isStrg == 1) {
     blaureset();
   } else {
     blau();
@@ -221,9 +221,9 @@ function clickPunkteBlau() {
 }
 
 function clickPunkteWeiß() {
-  if (shift == 1) {
+  if (isShift == 1) {
     weißminus();
-  } else if (strg == 1) {
+  } else if (isStrg == 1) {
     weißreset();
   } else {
     weiß();
@@ -231,31 +231,33 @@ function clickPunkteWeiß() {
 }
 
 function clickOseikomiBlau() {
-  if (shift == 1) {
-    stopCountb();
-    countb = 1;
-  } else if (strg == 1) {
-    resetb();
-  } else {
+  if (iscountb == 0 && isStrg == 0) {
     startCountb();
+    iscountb = 1;
+  } else if (iscountb == 1 && isStrg == 0) {
+    stopCountb();
+    iscountb = 0;
+  } else if (isStrg == 1) {
+    resetCountb();
   }
 }
 
 function clickOseikomiWeiß() {
-  if (shift == 1) {
-    stopCountw();
-    countw = 1;
-  } else if (strg == 1) {
-    resetw();
-  } else {
+  if (iscountw == 0 && isStrg == 0) {
     startCountw();
+    iscountw = 1;
+  } else if (iscountw == 1 && isStrg == 0) {
+    stopCountw();
+    iscountw = 0;
+  } else if (isStrg == 1) {
+    resetCountw();
   }
 }
 
 function clickShidoBlau() {
-  if (shift == 1) {
+  if (isShift == 1) {
     Shidominusb();
-  } else if (strg == 1) {
+  } else if (isStrg == 1) {
     Shidoresetb();
   } else {
     Shidob();
@@ -263,9 +265,9 @@ function clickShidoBlau() {
 }
 
 function clickShidoWeiß() {
-  if (shift == 1) {
+  if (isShift == 1) {
     Shidominusw();
-  } else if (strg == 1) {
+  } else if (isStrg == 1) {
     Shidoresetw();
   } else {
     Shidow();
@@ -273,11 +275,14 @@ function clickShidoWeiß() {
 }
 
 function clickTime() {
-  if (shift == 1) {
-    stopCountdown();
-  } else if (strg == 1) {
-    resetCountdown();
-  } else {
+  if (istime == 0 && isStrg == 0) {
     startCountdown();
+    istime = 1;
+  } else if (istime == 1 && isStrg == 0) {
+    stopCountdown();
+    istime = 0;
+  } else if (isStrg == 1) {
+    resetCountdown();
+    istime = 0;
   }
 }

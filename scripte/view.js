@@ -1,4 +1,14 @@
 let mirroredWindow = null;
+/*const url_params = new URLSearchParams(window.location.hash.slice(1));
+const is_view = url_params.has('view');
+
+if (is_view) {
+  // If the URL contains the 'view' parameter, open the mirrored window
+ const optionals = document.getElementsByClassName('optional');
+
+  for(i = 0; i < optionals.length; i++) {
+    optionals[i].classList.add('hidden');
+  }}*/
 
 function openMirroredWindow() {
   if (!mirroredWindow || mirroredWindow.closed) {
@@ -60,7 +70,7 @@ function openMirroredWindow() {
 
 const broadcast = new BroadcastChannel("judo_scoreboard_channel");
 
-setInterval(updateMirroredWindow, 50); // Update countdown 20 times per second
+setInterval(updateMirroredWindow, 50); // Update 20 times per second
   broadcast.onmessage = function (event) {
     const data = event.data;
     if (data.ViewTunier) {
@@ -114,8 +124,6 @@ setInterval(updateMirroredWindow, 50); // Update countdown 20 times per second
     if (data.Viewimg3w) {
       document.getElementById("Viewimg3w").style.visibility = data.Viewimg3w;
     }
-
-    console.clear();
   };
 
   function updateMirroredWindow() {

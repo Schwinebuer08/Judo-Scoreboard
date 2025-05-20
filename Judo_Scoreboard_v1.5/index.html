@@ -39,21 +39,56 @@
       <input type="text" class="rechts title" id="Gewichtsklasse" placeholder="Gewichtsklasse" />
     </div>
   </nav>
-  <button onclick="openMirroredWindow()">Gespiegeltes Fenster öffnen</button>
+ <button onclick="openMirroredWindow()">Gespiegeltes Fenster öffnen</button>
+   <!--<a href="#view" type="button" target="_blank">Gespiegeltes Fenster öffnen</a>-->
 
   <main id="main">
     <div class="kämpfer">
       <div class="links">
-        <input class="inw" type="text" id="KampferA" placeholder="Kämpfer A" value="___" ><br />
-        <p id="PunkteWeiß" onclick="clickPunkteWeiß()">0 Punkte</p>
+        <input class="inw" type="text" id="KampferA" placeholder="Kämpfer A" value="---"><br />
+        <div class="Punkte">
+          <p id="PunkteWeiß" onclick="clickPunkteWeiß()">0 Punkte</p>
+          <div class="pktBtn optional">
+            <button onclick="weißipp()">+</button>
+            <p class="pkt">Ippon</p>
+            <button onclick="minusweißipp()">-</button>
+          </div>
+          <div class="pktBtn optional">
+            <button onclick="weißwaz()">+</button>
+            <p class="pkt">Wa-zari</p>
+            <button onclick="minusweißwaz()">-</button>
+          </div>
+          <div class="pktBtn optional">
+            <button onclick="weißyuko()">+</button>
+            <p class="pkt">Yuko</p>
+            <button onclick="minusweißyuko()">-</button>
+          </div>
+        </div>
         <br />
         <p id="counterw" onclick="clickOseikomiWeiß()">Oseikomi: 0 Sekunden</p>
         <br />
         <p id="Shidow" onclick="clickShidoWeiß()">Shido</p>
       </div>
       <div class="rechts">
-        <input class="inb" type="text" id="KampferB" placeholder="Kämpfer B" value="___" /><br />
+        <input class="inb" type="text" id="KampferB" placeholder="Kämpfer B" value="---" /><br />
+        <div class="Punkte">
         <p id="PunkteBlau" onclick="clickPunkteBlau()">0 Punkte</p>
+          <div class="pktBtn optional">
+            <button onclick="blauipp()">+</button>
+            <p class="pkt">Ippon</p>
+            <button onclick="minusblauipp()">-</button>
+          </div>
+          <div class="pktBtn optional">
+            <button onclick="blauwaz()">+</button>
+            <p class="pkt">Wa-zari</p>
+            <button onclick="minusblauwaz()">-</button>
+          </div>
+          <div class="pktBtn optional">
+            <button onclick="blauyuko()">+</button>
+            <p class="pkt">Yuko</p>
+            <button onclick="minusblauyuko()">-</button>
+          </div>
+        </div>
         <br />
         <p id="counterb" onclick="clickOseikomiBlau()">Oseikomi: 0 Sekunden</p>
         <br />
@@ -70,7 +105,6 @@
     <img class="red_dot" id="img2b" src="img/red_dot.png" style="visibility: hidden" />
     <img class="red_dot" id="img1b" src="img/red_dot.png" style="visibility: hidden" />
   </footer>
-
 </body>
 
 </html>

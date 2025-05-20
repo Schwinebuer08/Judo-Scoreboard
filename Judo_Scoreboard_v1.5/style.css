@@ -28,8 +28,8 @@ main {
 }
 
 input {
- border: 0px;
- outline: none;
+  border: 0px;
+  outline: none;
 }
 
 .kämpfer {
@@ -70,6 +70,30 @@ input {
   border: 0px;
   color: black;
   text-align: center;
+}
+
+.Punkte {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pktBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 1vw;
+}
+
+.pktBtn button {
+  font-size: 2vw;
+  width: 6vh;
+}
+
+.pkt {
+  font-size: 2vw;
+  margin: 1vw;
 }
 
 footer {

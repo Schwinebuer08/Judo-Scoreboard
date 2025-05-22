@@ -64,7 +64,7 @@ function openMirroredWindow() {
 
 </body>
   <script src="scripte/view.js"></script>
-</html>    `);
+</html>`);
   }
 }
 

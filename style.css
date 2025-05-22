@@ -1,5 +1,6 @@
 * {
   margin: 0px;
+  
 }
 
 body {
@@ -153,4 +154,10 @@ footer {
   background-color: gold;
   color: black;
   cursor: pointer;
+}
+
+.Copyright {
+  font-size: 1vw;
+  color: white;
+  text-align: right;
 }

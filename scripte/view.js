@@ -10,7 +10,16 @@ if (is_view) {
     optionals[i].classList.add('hidden');
   }}*/
 
+function clickMirroredWindow() {
+  if (mirroredWindow && !mirroredWindow.closed) {
+    mirroredWindow.focus();
+  } else {
+    openMirroredWindow();
+  }
+}
+
 function openMirroredWindow() {
+
   if (!mirroredWindow || mirroredWindow.closed) {
     mirroredWindow = window.open("", "MirroredWindow");
     mirroredWindow.document.write(`

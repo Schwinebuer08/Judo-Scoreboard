@@ -43,6 +43,7 @@ function closeConfig() {
   document.getElementById("Tunier").style.display = "flex";
   document.getElementById("Gewichtsklasse").style.display = "flex";
   isconfig = 0;
+  document.getElementById("fileInput").value = "";
 }
 
 document.addEventListener("DOMContentLoaded", function() {

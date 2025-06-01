@@ -6,9 +6,9 @@ function saveConfig() {
   maxOseikomi = document.getElementById("ose").value;
   startingMinutes = document.getElementById("tim").value;
   timeSave();
+  yuko = document.getElementById("yuk").value;
   wazari = document.getElementById("waz").value;
   ippon = document.getElementById("ipp").value;
-  yuko = document.getElementById("yuk").value;
   closeConfig();
 }
 
@@ -27,9 +27,9 @@ function openConfig() {
   document.getElementById("poi").value = maxpunkte;
   document.getElementById("ose").value = maxOseikomi;
   document.getElementById("tim").value = startingMinutes;
+  document.getElementById("yuk").value = yuko;
   document.getElementById("waz").value = wazari;
   document.getElementById("ipp").value = ippon;
-  document.getElementById("yuk").value = yuko;
   document.getElementById("main").style.display = "none";
   document.getElementById("shido_time").style.display = "none";
   document.getElementById("Tunier").style.display = "none";
@@ -44,3 +44,24 @@ function closeConfig() {
   document.getElementById("Gewichtsklasse").style.display = "flex";
   isconfig = 0;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const fileInput = document.getElementById("fileInput");
+  if (fileInput) {
+    fileInput.addEventListener("change", () =>  {
+      const fr = new FileReader();
+      fr.readAsText(fileInput.files[0]);
+      fr.addEventListener("load", () => {
+        let configData = JSON.parse(fr.result);
+        console.log("Config loaded:", configData);
+        maxpunkte = configData.maxpunkte;
+        maxOseikomi = configData.maxOseikomi;
+        startingMinutes = configData.startingMinutes;
+        yuko = configData.yuko;
+        wazari = configData.wazari;
+        ippon = configData.ippon;
+        openConfig();
+      });
+    });
+  }
+});

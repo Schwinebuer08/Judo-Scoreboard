@@ -19,7 +19,6 @@ function clickMirroredWindow() {
 }
 
 function openMirroredWindow() {
-
   if (!mirroredWindow || mirroredWindow.closed) {
     mirroredWindow = window.open("", "MirroredWindow");
     mirroredWindow.document.write(`

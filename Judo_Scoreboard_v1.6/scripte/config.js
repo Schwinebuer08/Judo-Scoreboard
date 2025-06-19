@@ -54,13 +54,14 @@ document.addEventListener("DOMContentLoaded", function() {
       fr.readAsText(fileInput.files[0]);
       fr.addEventListener("load", () => {
         let configData = JSON.parse(fr.result);
-        console.log("Config loaded:", configData);
         maxpunkte = configData.maxpunkte;
         maxOseikomi = configData.maxOseikomi;
         startingMinutes = configData.startingMinutes;
         yuko = configData.yuko;
         wazari = configData.wazari;
         ippon = configData.ippon;
+        document.getElementById("Tunier").value = configData.Tunier;
+        document.getElementById("Gewichtsklasse").value = configData.Gewichtsklasse;
         openConfig();
       });
     });

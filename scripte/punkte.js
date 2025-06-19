@@ -60,7 +60,7 @@ function blauyuko() {
 }
 
 function minusblauyuko() {
-  punkteb = Math.min(punkteb - Number(yuko), 0);
+  punkteb = Math.max(punkteb - Number(yuko), 0);
   document.getElementById("PunkteBlau").innerHTML = punkteb + " Punkte";
 }
 
@@ -70,7 +70,7 @@ function blauwaz() {
 }
 
 function minusblauwaz() {
-  punkteb = Math.min(punkteb - Number(wazari), 0);
+  punkteb = Math.max(punkteb - Number(wazari), 0);
   document.getElementById("PunkteBlau").innerHTML = punkteb + " Punkte";
 }
 
@@ -80,7 +80,7 @@ function blauipp() {
 }
 
 function minusblauipp() {
-  punkteb = Math.min(punkteb - Number(ippon), 0);
+  punkteb = Math.max(punkteb - Number(ippon), 0);
   document.getElementById("PunkteBlau").innerHTML = punkteb + " Punkte";
 }
 

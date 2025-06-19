@@ -5,5 +5,7 @@
   "startingMinutes": 4,
   "yuko": 2,
   "wazari": 3,
-  "ippon": 5
+  "ippon": 5,
+  "Tunier":"Tuniername",
+  "Gewichtsklasse":"Gewichtsklasse"
 }

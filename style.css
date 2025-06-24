@@ -1,6 +1,5 @@
 * {
   margin: 0px;
-  
 }
 
 body {
@@ -19,6 +18,21 @@ nav {
   grid-area: navbar;
   background-color: black;
   display: flex;
+}
+
+button {
+  border-width: 0.1vw;
+}
+
+.mirror {
+  aspect-ratio: 16/9;
+  width: 14vw;
+  height: auto;
+  background-color: white;
+  background-image: url('img/KJV_RVO_Logo.jpg');
+  background-size: 70%;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 main {
@@ -157,7 +171,7 @@ footer {
 }
 
 .Copyright {
-  font-size: 1vw;
+  font-size: 3vh;
   color: white;
   text-align: right;
 }

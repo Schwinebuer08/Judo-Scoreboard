@@ -34,6 +34,7 @@ function openConfig() {
   document.getElementById("shido_time").style.display = "none";
   document.getElementById("Tunier").style.display = "none";
   document.getElementById("Gewichtsklasse").style.display = "none";
+  document.getElementById("Mirror").style.display = "none";
 }
 
 function closeConfig() {
@@ -44,6 +45,7 @@ function closeConfig() {
   document.getElementById("Gewichtsklasse").style.display = "flex";
   isconfig = 0;
   document.getElementById("fileInput").value = "";
+  document.getElementById("Mirror").style.display = "block";
 }
 
 document.addEventListener("DOMContentLoaded", function() {

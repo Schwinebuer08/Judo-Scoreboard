@@ -20,7 +20,7 @@ function clickMirroredWindow() {
 
 function openMirroredWindow() {
   if (!mirroredWindow || mirroredWindow.closed) {
-    mirroredWindow = window.open("", "MirroredWindow");
+    mirroredWindow = window.open("", "MirroredWindow", "popup");
     mirroredWindow.document.write(`
 <!DOCTYPE html>
 <html lang="de">
@@ -29,7 +29,7 @@ function openMirroredWindow() {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Judo Scoreboard</title>
-  <link rel="icon" type="image/x-icon" href="img/logo_tsv.png" />
+  <link rel="icon" type="image/x-icon" href="img/KJV_RVO_Logo.jpg" />
   <link href="style.css" rel="stylesheet" />
 </head>
 

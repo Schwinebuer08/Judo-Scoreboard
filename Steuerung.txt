@@ -1,16 +1,23 @@
+-----------Punkte-----------
+Weiß:
++Ippon "q" +Wazari "w" +Yuko "e"
+-Ippon "Q" -Wazari "Q" -Yuko "Q"
 
-Die Punkte und Shidos wird mit der Maus und den Tasten "Umschalten" und "Strg" geteuert.
-
-Dabei erhöt ein Mausklick mit der Maus den Wert des jeweilige Objekt um 1.
-
-"Umschalten" + Mausklick senkt den Wert um 1.
-
-"Strg" + Mausklick setzt den Wert zurück
+Blau:
++Ippon "a" +Wazari "s" +Yuko "d"
+-Ippon "A" -Wazari "S" -Yuko "D"
 
 
-Die Kampfzeit und beide Osaikomis werden mit Mausklick gestartet und gestoppt.
+-----------Osaikomi-----------
+Weiß: Start/Stopp "t"
+Blau: Start/Stopp "g"
 
-"Strg" + MausKlick setzt die jeweilige Zeit zurück
+
+-----------Shidos-----------
+Weiß:
++Shido "i" -Shido "I"
+Blau:
++Shido "k" -Shido "K"
 
 
 -----------Wichtig-----------

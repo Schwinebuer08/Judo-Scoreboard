@@ -20,7 +20,7 @@ function clickMirroredWindow() {
 
 function openMirroredWindow() {
   if (!mirroredWindow || mirroredWindow.closed) {
-    mirroredWindow = window.open("", "MirroredWindow");
+    mirroredWindow = window.open("", "MirroredWindow", "popup");
     mirroredWindow.document.write(`
 <!DOCTYPE html>
 <html lang="de">
@@ -29,7 +29,7 @@ function openMirroredWindow() {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Judo Scoreboard</title>
-  <link rel="icon" type="image/x-icon" href="img/logo_tsv.png" />
+  <link rel="icon" type="image/x-icon" href="img/KJV_RVO_Logo.jpg" />
   <link href="style.css" rel="stylesheet" />
 </head>
 
@@ -43,7 +43,7 @@ function openMirroredWindow() {
   <main id="main">
     <div class="kämpfer">
       <div class="links" style="color: white;">
-        <input class="inb" type="text" id="ViewKampferB" value="___" /><br />
+        <input class="inb" type="text" id="ViewKampferB" value="---" /><br />
         <p id="ViewPunkteBlau">0 Punkte</p>
         <br />
         <p id="Viewcounterb">Oseikomi: 0 Sekunden</p>
@@ -51,7 +51,7 @@ function openMirroredWindow() {
         <p id="ViewShidob">Shido</p>
       </div>
       <div class="rechts" style="color: black;">
-        <input class="inw" type="text" id="ViewKampferA" value="___" /><br />
+        <input class="inw" type="text" id="ViewKampferA" value="---" /><br />
         <p id="ViewPunkteWeiß">0 Punkte</p>
         <br />
         <p id="Viewcounterw">Oseikomi: 0 Sekunden</p>

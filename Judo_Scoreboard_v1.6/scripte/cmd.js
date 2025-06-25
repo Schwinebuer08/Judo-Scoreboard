@@ -5,6 +5,203 @@ let iscountw = 0;
 let isShift = 0;
 let isStrg = 0;
 
+
+document.addEventListener("keydown", function (key) {
+  //-------------------------Kampfzeit-------------------------
+
+  // Kampfzeit toggle
+  if (key.code == "Space") {
+    if (istime == 0) {
+      startCountdown();
+      istime = 1;
+    } else {
+      stopCountdown();
+      istime = 0;
+      stopCountb();
+      iscountb = 0;
+      stopCountw();
+      iscountw = 0;
+    }
+  }
+
+  // Kampfzeit reset
+//   if (key.key == "") {
+//     resetCountdown();
+//     istime = 0;
+//     iscountb = 0;
+//     iscountw = 0;
+//   }
+
+  //-------------------------Punkte-------------------------
+
+  // Ippon Weiß
+  if (key.key == "q") {
+    weißipp();
+  }
+
+  // Wazari Weiß
+  if (key.key == "w") {
+    weißwaz();
+  }
+
+  // Yuko Weiß
+  if (key.key == "e") {
+    weißyuko();
+  }
+
+  // -Ippon Weiß
+  if (key.key == "Q") {
+    minusweißipp();
+  }
+
+  // -Wazari Weiß
+  if (key.key == "W") {
+    minusweißwaz();
+  }
+
+  // -Yuko Weiß
+  if (key.key == "E") {
+    minusweißyuko();
+  }
+
+// Punkt reset Weiß
+  // if (key.key == "J") {
+  //   weißreset();
+  // }
+
+  // Ippon Blau
+  if (key.key == "a") {
+    blauipp();
+  }
+
+  // Wazari Blau
+  if (key.key == "s") {
+    blauwaz();
+  }
+
+  // Yuko Blau
+  if (key.key == "d") {
+    blauyuko();
+  }
+
+  // -Ippon Blau
+  if (key.key == "A") {
+    minusblauipp();
+  }
+
+  // -Wazari Blau
+  if (key.key == "S") {
+    minusblauwaz();
+  }
+
+  // -Yuko Blau
+  if (key.key == "D") {
+    minusblauyuko();
+  }
+
+  // Punkt reset Blau
+  // if (key.key == "D") {
+  //   blaureset();
+  // }
+
+  //-------------------------Oseikomi-------------------------
+
+  // Oseikomi Weiß toggle
+  if (key.key == "t") {
+    if (iscountw == 0) {
+      startCountw();
+      iscountw = 1;
+    } else {
+      stopCountw();
+      iscountw = 0;
+    }
+  }
+
+  // Oseikomi Weiß reset
+  // if (key.key == "O") {
+  //   resetw();
+  //   iscountw = 0;
+  // }
+
+  // Oseikomi Blau toggle
+  if (key.key == "g") {
+    if (iscountb == 0) {
+      startCountb();
+      iscountb = 1;
+    } else {
+      stopCountb();
+      iscountb = 0;
+    }
+  }
+
+  // Oseikomi Blau reset
+  // if (key.key == "W") {
+  //   resetb();
+  //   iscountb = 0;
+  // }
+
+  //-------------------------Shidos-------------------------
+
+  // Shido + Weiß
+  if (key.key == "i") {
+    Shidow();
+  }
+
+//   // Shido - Weiß
+  if (key.key == "I") {
+    Shidominusw();
+  }
+
+  // Shido reset Weiß
+  // if (key.key == ".") {
+  //   Shidoresetw();
+  // }
+
+  // Shido + Blau
+  if (key.key == "k") {
+    Shidob();
+  }
+
+  // Shido - Blau
+  if (key.key == "K") {
+    Shidominusb();
+  }
+
+  // Shido reset Blau
+  // if (key.key == "y") {
+  //   Shidoresetb();
+  // }
+
+//-------------------------Reset all-------------------------
+if (key.key == "#") {
+  resetCountdown();
+  // istime = 0;
+  blaureset();
+  weißreset();
+  resetCountb();
+  iscountb = 0;
+  resetCountw();
+  iscountw = 0;
+  Shidoresetb();
+  Shidoresetw();
+}
+
+//-------------------------Config-------------------------
+
+// Config toggle
+if (key.key == "'") {
+  if (isconfig == 0) {
+    openConfig();
+    isconfig = 1;
+  } else {
+    closeConfig();
+    isconfig = 0;
+  }
+}
+});
+
+
+
 document.addEventListener("keydown", function (e) {
   if (e.key == "Shift") {
     isShift = 1;

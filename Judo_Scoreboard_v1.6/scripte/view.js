@@ -43,7 +43,7 @@ function openMirroredWindow() {
   <main id="main">
     <div class="kämpfer">
       <div class="links" style="color: white;">
-        <input class="inb" type="text" id="ViewKampferB" value="___" /><br />
+        <input class="inb" type="text" id="ViewKampferB" value="---" /><br />
         <p id="ViewPunkteBlau">0 Punkte</p>
         <br />
         <p id="Viewcounterb">Oseikomi: 0 Sekunden</p>
@@ -51,7 +51,7 @@ function openMirroredWindow() {
         <p id="ViewShidob">Shido</p>
       </div>
       <div class="rechts" style="color: black;">
-        <input class="inw" type="text" id="ViewKampferA" value="___" /><br />
+        <input class="inw" type="text" id="ViewKampferA" value="---" /><br />
         <p id="ViewPunkteWeiß">0 Punkte</p>
         <br />
         <p id="Viewcounterw">Oseikomi: 0 Sekunden</p>

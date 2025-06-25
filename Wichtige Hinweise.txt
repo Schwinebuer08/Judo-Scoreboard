@@ -1,0 +1,29 @@
+--------------WICHTIG--------------
+
+  
+
+1. Öffnen sie die Start datei.
+
+  
+
+2. Öffnen sie das Zuschauerfenster mit dem Knopf oben rechts.
+
+
+
+3. Schieben sie diesen auf den jeweiligen Bildschirm.
+
+
+
+4. In den Vollbildmodus wechseln mit der Taste "F11" oder über die Einstellungen.
+
+
+
+5. Nach jedem Kampf umbedingt alles zurücksetzten mit der Taste "#" !!!
+
+
+
+   Die Einstellungen bleiben erhalten.
+
+
+
+6. Die Steuerung wird in der Datei Steuerung erklärt.

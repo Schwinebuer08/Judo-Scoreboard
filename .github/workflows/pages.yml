@@ -30,7 +30,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./Judo_Scoreboard_v1.6/
+          source: ./Judo_Scoreboard/
           destination: ./_site
 
       - name: Upload artifact

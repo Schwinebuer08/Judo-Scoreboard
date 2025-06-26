@@ -7,10 +7,21 @@ Blau:
 +Ippon "a" +Wazari "s" +Yuko "d"
 -Ippon "A" -Wazari "S" -Yuko "D"
 
+Oder
+
+Mausklick:                  1 Punkt hoch
+Umschalten und Mausklick:   1 Punkt runter
+Strg und Mausklick:         zurücksetzten
+
 
 -----------Osaikomi-----------
 Weiß: Start/Stopp "t"
 Blau: Start/Stopp "g"
+
+Oder
+
+Mausklick:                  Start/Stopp
+Strg und Mausklick:         zurücksetzten
 
 
 -----------Shidos-----------
@@ -18,6 +29,21 @@ Weiß:
 +Shido "i" -Shido "I"
 Blau:
 +Shido "k" -Shido "K"
+
+Oder
+
+Mausklick:                  1 Shido hoch
+Umschalten und Mausklick:   1 Shido runter
+Strg und Mausklick:         zurücksetzten
+
+
+-----------Zeit-----------
+Weiß: Start/Stopp "Leertaste"
+
+Oder
+
+Mausklick:                  Start/Stopp
+Strg und Mausklick:         zurücksetzten
 
 
 -----------Wichtig-----------

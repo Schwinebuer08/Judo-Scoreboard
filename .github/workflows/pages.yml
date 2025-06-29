@@ -62,7 +62,14 @@ jobs:
             Have Fun
 
       - name: Zip site folder
-        run: zip -r Judo-Scoreboard.zip ./_site/
+        run: cd _site && zip -r ../Judo-Scoreboard.zip ./*
+
+      - name: Delete old release and tag if exists
+        run: |
+          gh release delete "${{ github.ref_name }}" -y || true
+          git push origin --delete "${{ github.ref_name }}" || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release Asset
         id: upload-release-asset 

@@ -70,7 +70,7 @@ jobs:
 
       - name: Zip site folder
         # run: cd _site && zip -r ../Judo-Scoreboard.zip ./*
-        run: zip -r Judo-Scoreboard.zip ./
+        run: zip -r Judo-Scoreboard.zip ./ -x "*.git*" "*.github*" "*._site*" # Exclude unnecessary files and directories
 
       - name: Upload Release Asset
         id: upload-release-asset 

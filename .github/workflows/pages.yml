@@ -36,6 +36,13 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
+      - name: Delete old release and tag if exists
+        run: |
+          gh release delete "${{ github.ref_name }}" -y || true
+          git push origin --delete "${{ github.ref_name }}" || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
@@ -63,13 +70,6 @@ jobs:
 
       - name: Zip site folder
         run: cd _site && zip -r ../Judo-Scoreboard.zip ./*
-
-      - name: Delete old release and tag if exists
-        run: |
-          gh release delete "${{ github.ref_name }}" -y || true
-          git push origin --delete "${{ github.ref_name }}" || true
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload Release Asset
         id: upload-release-asset 

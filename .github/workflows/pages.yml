@@ -69,7 +69,8 @@ jobs:
             Have Fun
 
       - name: Zip site folder
-        run: cd _site && zip -r ../Judo-Scoreboard.zip ./*
+        # run: cd _site && zip -r ../Judo-Scoreboard.zip ./*
+        run: zip -r Judo-Scoreboard.zip ./
 
       - name: Upload Release Asset
         id: upload-release-asset 
